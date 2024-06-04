@@ -1,0 +1,390 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+/*estilos general de la página*/
+:root{
+    /* paleta */
+    --color1:#6c5855;
+    --color2:#38222d;
+    --color3:#9f9184;
+    --color4:#b5b4b1;
+    --color5:#d0d3d3;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    color: var(--color1);
+    /*fuente y config importadas*/
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    
+}
+body{
+    display: flex;
+    flex-direction: column;    
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    position: fixed;    
+    width: 100%;
+    height: 50px;
+    background-color: #faebd7;
+    border: dotted;
+    border-color: var(--color2);
+}
+
+main{
+    background-image: url(../img/Amigusay-logo.png);
+    background-size: 70px 70px;
+    background-attachment: fixed;
+    /* background-position: left ; */
+    background-clip: border-box;
+    display: flex;
+    /* flex: 1; */
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: var(--color2);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-top: 50px;
+}
+
+footer{
+    position: fixed;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: #d99b93;  
+    width: 100%;
+    height: 100px;
+    border: dotted;
+    border-color: var(--color2);
+}
+
+.logo-header{
+    display: flex;
+    width: 50%;
+}
+
+.logo-header img{
+ background-color: var(--color2);   
+ width: 45px;
+
+}
+
+.nav-header{
+    display: flex;
+    position: relative;
+    width: 50%;
+    justify-content: end;
+    align-items: center;
+    
+}
+
+.nav-header-ul{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    list-style-type: none;
+    
+}
+
+.nav-header-ul li{
+    margin: 20px;
+}
+
+.nav-header-ul a{
+    text-decoration: none;
+}
+
+
+.contenedor-container{
+    background-color: var(--color5);
+    display: flex;
+    flex-direction: column;
+    width: 700px;    
+    height: 100vh;
+    overflow-y: auto;
+    align-items: center;
+}
+
+.contenedor-container img{
+    margin-top: 70px;
+    width: 25%;
+   
+    animation: rotate 30s linear infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.encabezado{
+    font-family: "Sacramento", cursive;
+    font-size: 30px;
+    font-weight: 400;/*determina el espesor de la letra, valores disponibles son normal y bold, pero también podemos asignar los valores 100, 200, 300, 400, 500, 600, 700, 800, y 900*/
+    font-style: normal;
+    text-align: center;
+}
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.cotacto-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    
+}
+
+footer a img{
+    width: 30px;
+}
+
+.copyright-text{
+    align-content: end;
+}
+
+.img-insta{
+ grid-column: 2/3;
+ grid-row: 1/2;
+ justify-self: center;
+ align-self: center;
+}
+
+.img-face{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+}
+
+.logoMarca-footer img{
+    width: 60px;
+    
+}
+
+.logoMarca-footer{ 
+    width: 100%;   
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+/*Estilos para registro*/
+
+.formulario{
+display: flex;
+flex-direction: column;
+background-color: var(--color5);
+width: 700px; 
+height: 85vh;
+justify-content: center;
+align-items: center;
+overflow-y: auto;
+top:0;
+};
+
+.register {
+    background-color: var(--color5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;    
+    height: 100vh;
+    padding-top: 30px;
+}
+.register h3 {
+    text-align: center;
+}
+.nombre-mail{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+
+}
+
+#errorNombre, #errorApellido,
+#errorMail,#errorUsuario,
+#errorContrasena,#errorRadio {
+    color: rgb(10, 20, 89);
+    
+}
+
+.nombre-mail input{
+    width: fit-content;
+    margin: 1px;
+}
+.radio-input-contenedor{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-template-rows: repeat(2,1fr);
+    width: 200px;
+    justify-content: center;
+    
+}
+
+.radio-input-contenedor input{
+    color: var(--color2);
+    cursor: pointer;
+    margin: 1px;
+}
+
+
+.register select{
+    margin-top: 10px;
+}
+
+.logo img{
+    width: 300px;
+   
+}
+
+.button-container button{
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+
+
+.boton-registrar:hover,
+.radio-input-contenedor input:hover,
+select:hover, option:hover,
+.nombre-mail input:hover {
+    background-color: var(--color2);
+    color: var(--color5);
+}
+
+/*Estilos Galeria de trabajos*/
+.seccion-galeria{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px; 
+    background-color: var(--color5);
+    margin-bottom: 97px;
+}
+
+.seccion-galeria h1{
+    margin: 10px;
+}
+
+.trabajos-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows:auto ;
+    gap: 5px;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tarjeta img{
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+
+    header{
+        height: 20px;
+    }
+
+    .logo-header{
+        width: 20px;
+    }
+    
+    .logo-header img{  
+        width: 20px;       
+    }
+
+    .nav-header{
+        justify-content: end;
+        width: 100vw;
+    }
+    
+    .nav-header-ul li{
+        margin: 2px;
+    }
+
+    .nav-header-ul{
+        justify-content: end;
+    }
+    
+    .nav-header-ul a{
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    main{        
+        margin-top: 20px;
+    }
+
+/*Galeria*/
+
+    .seccion-galeria{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .seccion-galeria h1{
+        margin: 0%;
+    }
+    .trabajos-container{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .tarjeta{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tarjeta img{
+        width: 75%;
+    }
+
+    /*footer*/
+    footer{
+        width: 100%;
+        height: 50px;
+    }
+
+    .copyright-text{
+        font-size: 10px;
+    }
+
+    .cotacto-container{
+        display: flex;
+        flex-wrap: wrap;
+        height: 25px;
+    }
+    .img-face, .img-insta{
+        width: 9vw;
+    }
+    .cotacto-container img{
+        width: 100%;
+    }
+
+    .logoMarca-footer{
+        display: none;
+    }
+
+}

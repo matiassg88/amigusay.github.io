@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigusay - Registro</title>
+    <link rel="stylesheet" href="./static/estilos/estilos.css">
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="logo-header">
+            <a href="index.html"><img src="static/img/Amigusay-logo.png" alt="" /></a>
+        </div>
+        <nav class="nav-header">
+            <ul class="nav-header-ul">
+                <li id=""><a href="trabajos.html">Trabajos</a></li>
+                <li id=""><a href="pedidos.html">Pedidos</a></li>
+                <li id=""><a href="registro.html">registro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="formulario">
+
+            <!--AQUI VA UN FORMULARIO DE REGISTRO-->
+            <form action="#" class="register" id="formRegister" method="get" novalidate>
+                <h3>Complete los siguientes campos</h3>
+                <div class="nombre-mail">
+                    <label class="error" id="errorNombre"></label>
+                    <input type="text" name="datosPersonales" id="nombre" placeholder="Nombre">
+                    <div class="error" id="errorApellido"></div>
+                    <input type="text" name="datosPersonales" id="apellido" placeholder="Apellido">
+                    <div class="error" id="errorMail"></div>
+                    <input type="text" name="datosPersonales" id="mail" placeholder="Mail">
+                    <div class="error" id="errorUsuario"></div>
+                    <input type="text" name="datosPersonales" id="usuario" placeholder="Usuario">
+                    <div class="error" id="errorContrasena"></div>
+                    <input type="password" name="datosPersonales" id="contraseña" placeholder="Contraseña">
+
+                    <h3>Seleccione un rango de edad</h3>
+
+                    <div class="error" id="errorRadio"></div>
+
+                    <div class="radio-input-contenedor" id="radio">
+                        <input type="radio" name="rangoEdad" id="hasta30" value="30">
+                        <label for="hasta30">0 a 30</label>
+                        <input type="radio" name="rangoEdad" id="hasta60" value="60">
+                        <label for="hasta60">31 a 60</label>
+                        <input type="radio" name="rangoEdad" id="hasta100" value="100">
+                        <label for="hasta100">61 a 100</label>
+                    </div>
+
+                    <h3>Seleccione una opción</h3>id
+
+                    <select name="select-sexo" id="select-sexo">
+                        <option value="m" id="sexo">Masculino</option>
+                        <option value="f" id="sexo">Femenino</option>
+                        <option value="otro" id="sexo">Otro</option>
+                    </select>
+
+                    <div class="button-container">
+                        <button type="submit" class="boton-registrar" id="boton-registrar">Registrar</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="logo">
+                <img src="static/img/Amigusay-logo.png" alt="logo de Amigusay">
+            </div>
+
+        </section>
+
+
+    </main>
+    <footer>
+
+        <div class="copyright-text">
+            <p>&copy; 2024 Unihorse code. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="cotacto-container">
+            <div class="logoMarca-footer">
+                <img src="static/img/Amigusay-logo.png" alt="">
+            </div>
+            <div class="img-insta">
+                <a href=""><img src="static/img/instaFace.png" alt="logo insta" /></a>
+            </div>
+            <div class="img-face">
+                <a href=""><img src="static/img/logoFace.png" alt="logo face" /></a>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="static/JS/form.js"></script>
+</body>
+
+</html>
